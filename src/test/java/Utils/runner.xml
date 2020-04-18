@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="ReportGenerator.ExtantListener" />
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="./restAssured/src/test/java/RestAssuredTest">
+        <classes>
+            <class name="RestAssuredTest.CreateBrand">
+                <methods>
+                    <include name="TC006_test_createBrand"/>
+                </methods>
+            </class>
+            <class name="RestAssuredTest.GetCategories">
+                <methods>
+                    <include name="TC004_test_GetCategories"/>
+                </methods>
+            </class>
+            <class name="RestAssuredTest.GetCoupon">
+                <methods>
+                    <include name="TC001_test_getCouponAPI"/>
+                    <include name="TC002_test_getApplicableCouponsForMerchant"/>
+                    <include name="TC003_test_searchCoupons"/>
+                </methods>
+            </class>
+            <class name="RestAssuredTest.LoginToCMS">
+                <methods>
+                    <include name="TC005_test_loginToCMS"/>
+                </methods>
+            </class>
+            <class name="RestAssuredTest.LogoutFromCMS">
+                <methods>
+                    <include name="TC006_test_logoutFromCMS"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
