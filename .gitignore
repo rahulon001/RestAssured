@@ -2,6 +2,7 @@
 target/
 reports/
 .idea/
+src/test/java/Utils/BaseClass.java
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
