@@ -25,7 +25,7 @@ public class F001_GetCoupon extends BaseClass {
     }
 
     @Test(dataProvider = "get_applicable_coupon")
-    public static void TC001_test_getApplicableCouponsForMerchant(String path, int status){
+    public static void TC002_test_getApplicableCouponsForMerchant(String path, int status){
         RestAssured.baseURI = baseURI;
 
         given().
@@ -38,7 +38,7 @@ public class F001_GetCoupon extends BaseClass {
     }
 
     @Test(dataProvider = "searchCoupons")
-    public static void TC001_test_searchCoupons(String query, String version, String clientType){
+    public static void TC003_test_searchCoupons(String query, String version, String clientType){
         RestAssured.baseURI = baseURI;
 
         given().

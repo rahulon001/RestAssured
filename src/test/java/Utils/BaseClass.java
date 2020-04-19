@@ -2,5 +2,5 @@ package Utils;
 
 
 public class BaseClass {
-        public static String baseURI = "http://localhost:9000";
+        public static String baseURI = "http://10.144.108.127:9000";
 }

@@ -12,8 +12,8 @@ public class F005_LogoutFromCMS extends BaseClass {
 //    openssl s_client -showcerts -connect server.edu:443 </dev/null 2>/dev/null|openssl x509 -outform PEM >mycertfile.pem
 
     @Test
-    public static void TC005_test_logoutFromCMS(){
-        String xAntiForgery = F004_LoginToCMS.TC004_test_loginToCMS();
+    public static void TC001_test_logoutFromCMS(){
+        String xAntiForgery = F004_LoginToCMS.TC001_test_loginToCMS();
         System.out.println(xAntiForgery);
         System.out.println("**** Logging out****");
         RestAssured.baseURI = baseURI;
@@ -27,7 +27,7 @@ public class F005_LogoutFromCMS extends BaseClass {
                 assertThat().statusCode(200);
     }
 
-    public static void TC005_test_logoutFromCMS(String xAntiForgery){
+    public static void TC001_test_logoutFromCMS(String xAntiForgery){
         RestAssured.baseURI = baseURI;
         System.out.println("**** Logging out****");
         given().relaxedHTTPSValidation().

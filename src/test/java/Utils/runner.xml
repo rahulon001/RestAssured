@@ -9,28 +9,28 @@
         <class name="RestAssuredTest.F001_GetCoupon">
             <methods>
                 <include name="TC001_test_getCouponAPI"/>
-                <include name="TC001_test_getApplicableCouponsForMerchant"/>
-                <include name="TC001_test_searchCoupons"/>
+                <include name="TC002_test_getApplicableCouponsForMerchant"/>
+                <include name="TC003_test_searchCoupons"/>
             </methods>
         </class>
         <class name="RestAssuredTest.F002_GetCategories">
             <methods>
-                <include name="TC002_test_GetCategories"/>
+                <include name="TC001_test_GetCategories"/>
             </methods>
         </class>
         <class name="RestAssuredTest.F003_CreateBrand">
             <methods>
-                <include name="TC003_test_createBrand"/>
+                <include name="TC001_test_createBrand"/>
             </methods>
         </class>
         <class name="RestAssuredTest.F004_LoginToCMS">
             <methods>
-                <include name="TC004_test_loginToCMS"/>
+                <include name="TC001_test_loginToCMS"/>
             </methods>
         </class>
         <class name="RestAssuredTest.F005_LogoutFromCMS">
             <methods>
-                <include name="TC005_test_logoutFromCMS"/>
+                <include name="TC001_test_logoutFromCMS"/>
             </methods>
         </class>
     </classes>

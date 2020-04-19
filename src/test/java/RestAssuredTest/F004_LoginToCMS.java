@@ -4,16 +4,12 @@ import Utils.BaseClass;
 import io.restassured.RestAssured;
 import io.restassured.filter.session.SessionFilter;
 import io.restassured.response.Response;
-import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
 public class F004_LoginToCMS extends BaseClass {
     static SessionFilter sessionFilter = new SessionFilter();
-
-
-    @Test
-    public static String TC004_test_loginToCMS() {
+    public static String TC001_test_loginToCMS() {
         RestAssured.baseURI = baseURI;
         System.out.println("**** Logging in****");
         Response res =
@@ -25,7 +21,7 @@ public class F004_LoginToCMS extends BaseClass {
                  when().
                        post("/legacy/login").
                  then().
-                        assertThat().statusCode(200).
+                        assertThat().statusCode(200).log().all().
                  extract().
                          response();
                          return res.getHeader("x-anti-forgery");

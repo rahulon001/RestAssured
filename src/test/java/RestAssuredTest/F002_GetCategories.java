@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 public class F002_GetCategories extends BaseClass {
 
     @Test
-    public static void TC002_test_GetCategories(){
+    public static void TC001_test_GetCategories(){
         RestAssured.baseURI = baseURI;
         Response res =
                 given().
