@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class GetCoupon extends BaseClass {
+public class F001_GetCoupon extends BaseClass {
 
     @Test(dataProvider = "get_coupon")
     public static void TC001_test_getCouponAPI(String version, String clientType){
@@ -25,7 +25,7 @@ public class GetCoupon extends BaseClass {
     }
 
     @Test(dataProvider = "get_applicable_coupon")
-    public static void TC002_test_getApplicableCouponsForMerchant(String path, int status){
+    public static void TC001_test_getApplicableCouponsForMerchant(String path, int status){
         RestAssured.baseURI = baseURI;
 
         given().
@@ -34,13 +34,11 @@ public class GetCoupon extends BaseClass {
                 get(path).
         then().
                 assertThat().statusCode(status).log().all();
-//        extract()
-//        extract the response
 
     }
 
     @Test(dataProvider = "searchCoupons")
-    public static void TC003_test_searchCoupons(String query, String version, String clientType){
+    public static void TC001_test_searchCoupons(String query, String version, String clientType){
         RestAssured.baseURI = baseURI;
 
         given().

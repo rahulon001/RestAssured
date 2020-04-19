@@ -8,12 +8,12 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class LoginToCMS extends BaseClass {
+public class F004_LoginToCMS extends BaseClass {
     static SessionFilter sessionFilter = new SessionFilter();
 
 
     @Test
-    public static String TC005_test_loginToCMS() {
+    public static String TC004_test_loginToCMS() {
         RestAssured.baseURI = baseURI;
         System.out.println("**** Logging in****");
         Response res =

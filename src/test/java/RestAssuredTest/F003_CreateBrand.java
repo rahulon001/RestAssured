@@ -4,15 +4,15 @@ import Utils.BaseClass;
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
-import static RestAssuredTest.LoginToCMS.sessionFilter;
+import static RestAssuredTest.F004_LoginToCMS.sessionFilter;
 import static io.restassured.RestAssured.given;
 
-public class CreateBrand extends BaseClass {
+public class F003_CreateBrand extends BaseClass {
 
-    public static String xAntiForgery = LoginToCMS.TC005_test_loginToCMS();
+    public static String xAntiForgery = F004_LoginToCMS.TC004_test_loginToCMS();
 
     @Test
-    public static void TC006_test_createBrand(){
+    public static void TC003_test_createBrand(){
         RestAssured.baseURI = baseURI;
         given().
                 filter(sessionFilter).
@@ -26,6 +26,6 @@ public class CreateBrand extends BaseClass {
         then().
                 assertThat().statusCode(200).log().all();
 
-        LogoutFromCMS.TC006_test_logoutFromCMS(xAntiForgery);
+        F005_LogoutFromCMS.TC005_test_logoutFromCMS(xAntiForgery);
     }
 }
