@@ -18,7 +18,7 @@ public class F003_CreateBrand extends BaseClass {
                 filter(sessionFilter).
                 header("Content-Type","multipart/form-data").
                 header("x-anti-forgery", xAntiForgery).
-                multiPart("M.jpg", "../java/Utils/images/M.jpg","image/jpg").
+                multiPart("M.jpg", "images/M.jpg","image/jpg").
                 multiPart("name", "test_brand").multiPart("desc", "Test_DESC").
                 multiPart("externalId", "Test183234_ID").multiPart("userGroup","42").
         when().

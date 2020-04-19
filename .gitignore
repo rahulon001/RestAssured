@@ -1,6 +1,7 @@
 ### Maven ###
 target/
 reports/
+logs/
 .idea/
 src/test/java/Utils/BaseClass.java
 pom.xml.tag

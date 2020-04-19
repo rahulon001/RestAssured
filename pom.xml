@@ -62,17 +62,32 @@
         <version>4.0.9</version>
     </dependency>
     <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>2.13.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+    <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.17</version>
+    </dependency>
+    <dependency>
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
         <version>7.1.0</version>
-        <scope>test</scope>
+        <scope>compile</scope>
     </dependency>
+    <!--    <dependency>-->
+<!--        <groupId>org.apache.logging.log4j</groupId>-->
+<!--        <artifactId>log4j-core</artifactId>-->
+<!--        <version>2.13.1</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--        <groupId>org.testng</groupId>-->
+<!--        <artifactId>testng</artifactId>-->
+<!--        <version>7.1.0</version>-->
+<!--        <scope>compile</scope>-->
+<!--    </dependency>-->
 </dependencies>
-    <build>
-        <resources>
-            <resource>
-                <directory>target/report/extentReport.html</directory>
-            </resource>
-        </resources>
-    </build>
 </project>
