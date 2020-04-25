@@ -11,7 +11,7 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 public class F001_GetCoupon extends BaseClass {
 
     @Test(dataProvider = "get_coupon")
-    public static void TC001_test_getCouponAPI(String version, String clientType){
+    public void TC001_test_getCouponAPI(String version, String clientType){
         RestAssured.baseURI = baseURI;
 
         given().
@@ -20,7 +20,7 @@ public class F001_GetCoupon extends BaseClass {
         when().
                 get("/coupons/v1/coupons/").
         then().
-                assertThat().statusCode(200).body(matchesJsonSchemaInClasspath("json-schemas/GetCouponResponseSchemas.json")).log().all();
+                assertThat().statusCode(200).body(matchesJsonSchemaInClasspath("json-schemas/GetCouponResponseSchemas.json"));
 
     }
 
@@ -33,7 +33,7 @@ public class F001_GetCoupon extends BaseClass {
         when().
                 get(path).
         then().
-                assertThat().statusCode(status).log().all();
+                assertThat().statusCode(status);
 
     }
 
@@ -50,7 +50,7 @@ public class F001_GetCoupon extends BaseClass {
         when().
                 get("/coupons/v1/coupons/").
         then().
-                assertThat().statusCode(200).body(matchesJsonSchemaInClasspath("json-schemas/GetCouponResponseSchemas.json")).log().all();
+                assertThat().statusCode(200).body(matchesJsonSchemaInClasspath("json-schemas/GetCouponResponseSchemas.json"));
 //        extract()
 //        extract the response
     }

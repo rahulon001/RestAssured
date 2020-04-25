@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="ReportGenerator.ExtantListener" />
     </listeners>
-<test verbose="2" preserve-order="true" name="./restAssured/src/test/java/RestAssuredTest">
+<test verbose="2" preserve-order="true" name="./src/test/java/RestAssuredTest">
     <classes>
         <class name="RestAssuredTest.F001_GetCoupon">
             <methods>
@@ -31,6 +31,11 @@
         <class name="RestAssuredTest.F005_LogoutFromCMS">
             <methods>
                 <include name="TC001_test_logoutFromCMS"/>
+            </methods>
+        </class>
+        <class name="RestAssuredTest.F006_CreateCoupons">
+            <methods>
+                <include name="TC001_test_createCoupons"/>
             </methods>
         </class>
     </classes>
